@@ -5,12 +5,15 @@
 int main()
 //main function
 {
-    int arr[7]={87,35,28,26,9,12,7};
+    int n;
+    printf("Size of the Array : ");
+    scanf("%d",&n);
+    int arr[100]={220, 146, 22, 19, 6, 42, 14, 5, 48, 47, 17, 39, 51, 7, 2, 99, 65, 7};
    //declaring integer type Array
     
-        for(int i=0;i<7;i++){
+        for(int i=0;i<n-1;i++){
             //declaring inner for loop
-            for(int j=0;j<6;j++){
+            for(int j=0;j<n-2;j++){
                 //declaring nested for loop
             if(arr[j]>arr[j+1]){
                 //condition
