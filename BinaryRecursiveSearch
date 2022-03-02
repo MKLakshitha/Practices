@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define size 10
+int main()
+{
+    int target,a[size],i;
+    target=89;
+    int first=0,last=size-1;
+
+    printf("Enter Elements to the Array : ");
+    for(i=0;i<10;i++){
+        scanf("%d",&a[i]);
+    }
+    printf("Search Element Index is : %d\n",bSearch(a,first,last,target));
+    return 0;
+}
+int bSearch(int arr[],int first,int last,int x){
+    int mid=(first+last)/2;
+    if(first>last){
+        return -1;
+    }
+    if(arr[mid]==x){
+        return mid;
+    }
+    else if(arr[mid]>x){
+       return bSearch(arr,first,mid-1,x); 
+    }
+    else{
+        return bSearch(arr,mid+1,last,x);
+    }
+}
